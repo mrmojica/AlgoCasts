@@ -14,6 +14,52 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+// Notes:
+// From 0 to n (iterate through rows)
+//  Create an empty string, 'level'
+//   From 0 to ??? (columns)
+//  IF the column should have a #
+//      Add a '#' to 'level'
+//  ELSE
+//      add a space to 'level'
+//  Console log 'level'
+function pyramid(n) {
+  const midpoint = Math.floor((2 * n - 1) / 2);
+  for (let row = 0; row < n; row++) {
+    let level = "";
+    for (let column = 0; column < 2 * n - 1; column++) {
+      if (midpoint - row <= column && midpoint + row >= column) {
+        level += "#";
+      } else {
+        level += " ";
+      }
+    }
+
+    console.log(level);
+  }
+}
+
+// Recursive solution (similar to steps problem):
+// function pyramid(n, row = 0, level = "") {
+//   if (n === row) {
+//     return;
+//   }
+
+// Number of columns = n * 2 - 1.
+//   if (2 * n - 1 === level.length) {
+//     console.log(level);
+//     return pyramid(n, row + 1);
+//   }
+
+//   const midpoint = Math.floor((2 * n - 1) / 2);
+
+//   if (midpoint - row <= level.length && midpoint + row >= level.length) {
+//     level += "#";
+//   } else {
+//     level += " ";
+//   }
+
+//   pyramid(n, row, level);
+// }
 
 module.exports = pyramid;
