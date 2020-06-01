@@ -69,13 +69,13 @@ function steps(n) {
 //     return;
 //   }
 
-//   // We no longer want to continue any code if the step is completed
+// We no longer want to continue any code if the step is completed
 //   if (n === stair.length) {
 //     console.log(stair);
 //     return steps(n, row + 1);
 //   }
 
-//   // create the step recursively
+// create the step recursively
 //   if (stair.length <= row) {
 //     stair += "#";
 //   } else {
