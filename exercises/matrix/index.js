@@ -29,6 +29,13 @@
 //  Decrement end column
 //  ...repeat for two sides
 
+// Need to create the nested arrays to represent matrix shape.
+// Think of an condition 'while' to loop around the matrix spiral
+// Create a counter to keep track of the #'s
+// Create a variable to keep track of row/columns (start/end)
+// Loop through each row/column in the spiral, make sure to increment/decrement when a row or column is completed.
+// Update counter variables when finishing a row/column
+
 function matrix(n) {
   const result = [];
 
